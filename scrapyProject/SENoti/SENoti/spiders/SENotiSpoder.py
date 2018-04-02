@@ -8,11 +8,13 @@ class SenotispoderSpider(scrapy.Spider):
     start_urls = ['http://software.nju.edu.cn/index.php?option=com_content&view=category&id=66&Itemid=12']
 
     def parse(self, response):
-        subSelector = response.xpath('//tr[@class="sectiontableentry1"]') #嵌套选择
+        subSelector = response.xpath('//tr[@class="sectiontableentry1"]') + response.xpath('//tr[@class="sectiontableentry2"]') #嵌套选择
         items = []
         for sub in subSelector:
             item = SenotiItem()
-            item['notiName'] = sub.xpath('./td/text()').extract()
+            item['serialNum'] = sub.xpath('./td[1]/text()').extract()
+            item['notiName'] = sub.xpath('./td[2]/a/text()').extract()
+            item['date'] = sub.xpath('./td[3]/text()').extract()
             items.append(item)
         return items
 

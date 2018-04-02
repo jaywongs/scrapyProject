@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/scrapyProject/SENoti" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/scrapyProject/weather/weather" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/scrapyProject/weather" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/scrapyProject/getProxy" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 2.7.14 (/usr/local/Cellar/python@2/2.7.14_3/Frameworks/Python.framework/Versions/2.7/bin/python2.7)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

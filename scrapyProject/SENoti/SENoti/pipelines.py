@@ -12,5 +12,7 @@ class SenotiPipeline(object):
         now = time.strftime('%Y-%m-%d',time.localtime())
         fileName = 'SE'+now+'.txt'
         with open(fileName,'a') as fp:
-            fp.write(item['notiName'][0].encode('utf-8') + '\n\n')
+            fp.write(item['serialNum'][0].encode('utf-8') + '\t')
+            fp.write(item['notiName'][0].encode('utf-8') + '\t')
+            fp.write(item['date'][0].encode('utf-8') + '\n\n')
         return item
